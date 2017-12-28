@@ -1,5 +1,6 @@
-package client;
+package test;
 
+import client.RedisClient;
 import entity.City;
 import org.junit.Test;
 

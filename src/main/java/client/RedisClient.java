@@ -17,7 +17,10 @@ import java.util.ResourceBundle;
  */
 public class RedisClient {
 
-    public  static JedisPool jedisPool; // 池化管理jedis链接池
+    /**
+     * 池化管理jedis链接池
+     */
+    public static JedisPool jedisPool;
 
     static {
 
