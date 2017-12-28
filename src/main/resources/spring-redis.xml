@@ -8,7 +8,7 @@
     <context:property-placeholder location="classpath:redis.properties" />
 
     <!-- 自动注解 -->
-    <context:component-scan base-package="service.impl" />
+    <!--<context:component-scan base-package="service.impl" />-->
 
     <!-- jedis 连接池配置参数： -->
     <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">

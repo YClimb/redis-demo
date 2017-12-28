@@ -21,7 +21,7 @@ public class SimpleClient {
         City city = new City();
         city.setCity("city");
         city.setCity("1");
-        city.setLast_update("2222");
+        city.setLastUpdate("2222");
 
         //调用方法处理
         boolean reusltCache = RedisClient.set("city1", city);
@@ -38,7 +38,7 @@ public class SimpleClient {
 
         City city = RedisClient.get("city1", City.class);
         if (city != null) {
-            System.out.println("从缓存中获取的对象，" + city.getCity() + "@" + city.getLast_update());
+            System.out.println("从缓存中获取的对象，" + city.getCity() + "@" + city.getLastUpdate());
         }
 
     }

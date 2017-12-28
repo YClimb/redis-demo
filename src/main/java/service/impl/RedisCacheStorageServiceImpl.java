@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 import service.RedisCacheStorageService;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -274,7 +275,7 @@ public class RedisCacheStorageServiceImpl<V> implements RedisCacheStorageService
             if (null != map) {
                 for (Map.Entry<String, String> entry : map.entrySet()) {
                     if (result == null) {
-                        result = new HashMap<>();
+                        result = new HashMap<String, V>();
                     }
                     result.put((String) JSON.parse(entry.getKey()), (V) JSON.parse(entry.getValue()));
                 }
